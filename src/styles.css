@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+/*Pagina principal colores*/
+.bg-primary-custom {
+    background-color: #40e0d0;
+}
+
+.bg-secondary-custom {
+    background-color: #228b22;
+}
+
+.bg-light-custom {
+    background-color: #ffffff;
+}
+
+.text-secondary-custom {
+    color: #228b22;
+}
+
+.botones_ini a {
+    margin-right: 100px;
+    border-radius: 25px;
+    background-color: #bbbbbb;
+    color: #000000;
+    text-align: center;
+}
+
+.botones_reg a{
+    margin-right: 10px;
+    border-radius: 25px;
+    background-color: #378642;
+    color: #ffffff;
+    text-align: center;
+}
+
+.tarjetaC{
+    border-radius: 25px;
+}
