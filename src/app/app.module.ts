@@ -9,6 +9,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { RecuperarComponent } from './recuperar/recuperar.component';
 import { PerfilesComponent } from './perfiles/perfiles.component';
 import { UsuarioClienteComponent } from './usuario-cliente/usuario-cliente.component';
+import { UsuarioEmpleadoComponent } from './usuario-empleado/usuario-empleado.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UsuarioClienteComponent } from './usuario-cliente/usuario-cliente.compo
     RegistroComponent,
     RecuperarComponent,
     PerfilesComponent,
-    UsuarioClienteComponent
+    UsuarioClienteComponent,
+    UsuarioEmpleadoComponent
   ],
   imports: [
     BrowserModule,

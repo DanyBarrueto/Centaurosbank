@@ -6,6 +6,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { RecuperarComponent } from './recuperar/recuperar.component';
 import { PerfilesComponent } from './perfiles/perfiles.component';
 import { UsuarioClienteComponent } from './usuario-cliente/usuario-cliente.component';
+import { UsuarioEmpleadoComponent } from './usuario-empleado/usuario-empleado.component';
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'registro', component:RegistroComponent},
   {path: 'recuperar_password', component:RecuperarComponent},
   {path: 'perfiles', component:PerfilesComponent},
-  {path: 'cliente', component:UsuarioClienteComponent}
+  {path: 'cliente', component:UsuarioClienteComponent},
+  {path: 'empleado', component:UsuarioEmpleadoComponent}
 ];
 
 @NgModule({

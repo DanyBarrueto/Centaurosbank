@@ -30,4 +30,8 @@ export class AppComponent {
   Cliente(){
     this.router.navigate(['/cliente']);
   }
+
+  Empleado(){
+    this.router.navigate(['/empleado']);
+  }
 }

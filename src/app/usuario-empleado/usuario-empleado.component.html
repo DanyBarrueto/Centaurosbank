@@ -1,0 +1,286 @@
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="img/centauro_logo.png" alt="Logo" class="me-2" style="width: 40px; height: 40px" />
+        <span class="fw-bold">Centauros Bank - Empleado</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-danger fw-bold" routerLink="">Salir</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="creacion-producto" class="card mb-4 shadow mt-4 container">
+    <div class="card-body">
+        <h5 class="card-title text-center fw-bold">Creación de Producto</h5>
+        <form>
+            <div class="mb-3">
+                <label for="nombreProducto" class="form-label">Nombre del Producto:</label>
+                <input type="text" class="form-control rounded-3" id="nombreProducto"
+                    placeholder="Ingrese el nombre del producto" />
+            </div>
+            <div class="mb-3">
+                <label for="descripcionProducto" class="form-label">Descripción:</label>
+                <textarea class="form-control rounded-3" id="descripcionProducto" rows="3"
+                    placeholder="Ingrese la descripción del producto"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">
+                Crear Producto
+            </button>
+        </form>
+    </div>
+</div>
+
+  <div id="lista-solicitudes" class="card mb-4 shadow container">
+    <div class="card-body">
+      <h5 class="card-title text-center fw-bold">Lista de Solicitudes</h5>
+      <table class="table table-striped align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>Cliente</th>
+            <th>Producto</th>
+            <th>Estado</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Juan Pérez</td>
+            <td>Producto A</td>
+            <td><span class="badge bg-warning text-dark">En proceso</span></td>
+            <td>
+              <button class="btn btn-info btn-sm">
+                <i class="fas fa-eye me-1"></i>Ver Detalles
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>María López</td>
+            <td>Producto B</td>
+            <td><span class="badge bg-success">Completado</span></td>
+            <td>
+              <button class="btn btn-info btn-sm">
+                <i class="fas fa-eye me-1"></i>Ver Detalles
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="tablero-control" class="card mb-4 shadow container">
+    <div class="card-body">
+      <h5 class="card-title text-center fw-bold">Tablero de Control</h5>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="card bg-success text-white mb-3 shadow">
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fas fa-check-circle"></i> Completadas
+              </h5>
+              <p class="card-text fs-4">150</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-warning text-dark mb-3 shadow">
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fas fa-clock"></i> Pendientes
+              </h5>
+              <p class="card-text fs-4">30</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-danger text-white mb-3 shadow">
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fas fa-times-circle"></i> Canceladas
+              </h5>
+              <p class="card-text fs-4">5</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Solicitud de Entrega -->
+  <div id="solicitud-entrega" class="card mb-4 shadow container">
+    <div class="card-body">
+      <h5 class="card-title text-center fw-bold">Solicitud de Entrega</h5>
+      <form>
+        <div class="mb-3">
+          <label for="nombreCliente" class="form-label">Nombre del Cliente:</label>
+          <input type="text" class="form-control rounded-3" id="nombreCliente"
+            placeholder="Ingrese el nombre del cliente" />
+        </div>
+        
+        <div class="mb-3">
+          <!-- Método de pago -->
+          <label for="paymentMethod" class="form-label">Selecciona el producto</label>
+          <select class="form-select" id="paymentMethod" onchange="toggleCardOptions(this)">
+            <option value="" selected>Seleccione una opción</option>
+            <option value="creditCard">Tarjeta de crédito</option>
+            <option value="debitCard">Tarjeta de débito</option>
+            <option value="prestamo">Prestamo</option>
+            <option value="fiducia">Fiducia</option>
+            <option value="cdt">CDT</option>
+            <option value="cuenta_ahorros">Cuenta de ahorros</option>
+          </select>
+
+          <!-- Opciones de tarjeta de crédito -->
+          <div id="cardOptions" class="mt-3 d-none">
+            <label for="cardType" class="form-label">Tipo de tarjeta</label>
+            <select class="form-select" id="cardType" onchange="toggleSpecificCardOptions(this)">
+              <option value="" selected>Seleccione una tarjeta</option>
+              <option value="visa">Visa</option>
+              <option value="mastercard">MasterCard</option>
+            </select>
+          </div>
+
+          <!-- Opciones específicas para Visa -->
+          <div id="visaOptions" class="mt-3 d-none">
+            <label for="visaType" class="form-label">Opciones de Visa</label>
+            <select class="form-select" id="visaType">
+              <option value="" selected>Seleccione un tipo de tarjeta Visa</option>
+              <option value="visaClassic">Visa Classic</option>
+              <option value="visaGold">Visa Gold</option>
+              <option value="visaPlatinum">Visa Platinum</option>
+              <option value="visaSignature">Visa Signature</option>
+              <option value="VisaInfinte">Visa Infinite</option>
+            </select>
+          </div>
+
+          <!-- Opciones específicas para MasterCard -->
+          <div id="mastercardOptions" class="mt-3 d-none">
+            <label for="mastercardType" class="form-label">Opciones de MasterCard</label>
+            <select class="form-select" id="mastercardType">
+              <option value="" selected>Seleccione un tipo de tarjeta MasterCard</option>
+              <option value="masterStandard">MasterCard Standard</option>
+              <option value="mastergold">MasterCard GOLD</option>
+              <option value="masterplatinun">MasterCard PLATINUM</option>
+              <option value="masterBlack">MasterCard BLACK</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="fechaEntrega" class="form-label">Fecha de Entrega:</label>
+          <input type="date" class="form-control rounded-3" id="fechaEntrega" />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">
+          Realizar Solicitud de Entrega
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Lista de Productos -->
+  <div id="lista-productos" class="card mb-4 shadow container">
+    <div class="card-body">
+      <h5 class="card-title text-center fw-bold">Lista de Productos</h5>
+      <table class="table table-striped align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Producto A</td>
+            <td>Descripción del Producto A</td>
+            <td>$100</td>
+            <td>
+              <button class="btn btn-info btn-sm">
+                <i class="fas fa-eye me-1"></i>Ver Detalles
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Producto B</td>
+            <td>Descripción del Producto B</td>
+            <td>$150</td>
+            <td>
+              <button class="btn btn-info btn-sm">
+                <i class="fas fa-eye me-1"></i>Ver Detalles
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Producto C</td>
+            <td>Descripción del Producto C</td>
+            <td>$200</td>
+            <td>
+              <button class="btn btn-info btn-sm">
+                <i class="fas fa-eye me-1"></i>Ver Detalles
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="bg-primary-custom text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h4 class="mb-3">Centauros</h4>
+
+          <ul class="list-unstyled d-flex align-items-center">
+            <li class="me-3">
+              <img src="img/centauro_logo.png" alt="CDT" style="height: 10vh" />
+            </li>
+            <li>
+              <p>
+                Tu seguridad financiera <br />
+                está en el mejor sitio.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4 class="mb-3">Contacto</h4>
+          <p class="mb-1">centauros bank.com</p>
+          <p>+57 321 2114326</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="mb-3">Síguenos</h4>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white">
+              <i class="fab fa-instagram fa-lg"></i>
+              <span class="visually-hidden">Instagram</span>
+            </a>
+            <a href="#" class="text-white">
+              <i class="fab fa-facebook fa-lg"></i>
+              <span class="visually-hidden">Facebook</span>
+            </a>
+            <a href="#" class="text-white">
+              <i class="fab fa-youtube fa-lg"></i>
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4 pt-4 border-top border-white-50">
+        <small>© 2024 Centauros. Todos los derechos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  
+
+</body>
