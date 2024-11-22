@@ -18,4 +18,8 @@ export class AppComponent {
   Registro(){
     this.router.navigate(['/registro']);
   }
+
+  Recuperar(){
+    this.router.navigate(['/recuperar_password']);
+  }
 }

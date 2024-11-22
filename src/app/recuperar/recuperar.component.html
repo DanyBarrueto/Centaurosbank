@@ -1,0 +1,24 @@
+<body style="background-color: #745813; font-family: Arial, sans-serif;">
+    <div class="container d-flex flex-column justify-content-center align-items-center vh-100">
+        <div class="card p-5 shadow" style="max-width: 500px; width: 100%; background-color: #f6c23e; border-radius: 10px;">
+            <h2 class="text-center font-weight-bold mb-4">Recuperar Contraseña</h2>
+            <p class="text-center mb-4">
+                Introduce tu correo electrónico registrado para recibir instrucciones sobre cómo restablecer tu contraseña.
+            </p>
+            <form>
+                <div class="form-group">
+                    <label for="correo" class="font-weight-bold">Correo Electrónico:</label><br>
+                    <input type="email" class="form-control rounded-pill" id="correo" placeholder="Correo">
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button routerLink="" type="submit" class="btn btn-dark rounded-pill px-5">Enviar</button>
+                </div>
+            </form>
+            <p class="text-center mt-3">
+                ¿Recordaste tu contraseña? 
+                <a routerLink="/ingreso" class="text-primary font-weight-bold">Inicia Sesión</a>
+            </p>
+        </div>
+    </div>
+</body>
