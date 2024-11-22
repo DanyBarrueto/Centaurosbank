@@ -22,4 +22,12 @@ export class AppComponent {
   Recuperar(){
     this.router.navigate(['/recuperar_password']);
   }
+
+  Perfiles(){
+    this.router.navigate(['/perfiles']);
+  }
+
+  Cliente(){
+    this.router.navigate(['/cliente']);
+  }
 }

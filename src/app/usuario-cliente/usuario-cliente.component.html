@@ -1,0 +1,119 @@
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">
+            <img src="img/centauro_logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+            Cliente - Centauros Bank
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link " href="#solicitud">Solicitud de Producto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#lista-productos">Lista de Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="">Salir</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div id="solicitud" class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-center">Solicitud de Producto</h5>
+                <form>
+                    <div class="mb-3">
+                        <label for="nombreProducto" class="form-label">Nombre del Producto:</label>
+                        <input type="text" class="form-control" id="nombreProducto"
+                            placeholder="Ingrese el nombre del producto" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cantidadProducto" class="form-label">Cantidad:</label>
+                        <input type="number" class="form-control" id="cantidadProducto"
+                            placeholder="Ingrese la cantidad" required min="1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="detallesProducto" class="form-label">Detalles adicionales:</label>
+                        <textarea class="form-control" id="detallesProducto" rows="3"
+                            placeholder="Ingrese detalles adicionales sobre el producto"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar Solicitud</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="lista-productos" class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-center">Lista de Productos Disponibles</h5>
+                <div class="list-group">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>Producto A</span>
+                        <button class="btn btn-info btn-sm">Ver Detalles</button>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>Producto B</span>
+                        <button class="btn btn-info btn-sm">Ver Detalles</button>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>Producto C</span>
+                        <button class="btn btn-info btn-sm">Ver Detalles</button>
+                    </div>
+                    <div class='list-group-item d-flex justify-content-between align-items-center'>
+                        <span>Producto D</span>
+                        <button class='btn btn-info btn-sm'>Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<br>
+    <footer class='bg-dark text-white py-5'>
+        <div class='container'>
+            <div class='row g-4'>
+                <div class='col-md-4'>
+                    <h4>Centauros</h4>
+
+                    <ul class='list-unstyled d-flex align-items-center'>
+                        <li class='me-3'>
+                            <img src='./images/centauro_logo.png' alt='' style='height: 10vh;' />
+                        </li>
+                        <li>
+                            <p>Tu seguridad financiera<br> está en el mejor sitio.</p>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class='col-md-4'>
+                    <h4>Contacto</h4>
+                    <p>centaurosbank.com</p>
+                    <p>+57 321 2114326</p>
+                </div>
+
+                <div class='col-md-4'>
+                    <h4>Síguenos</h4>
+                    <a href="#" aria-label='Instagram' class='text-white me-3'><i
+                            class='fab fa-instagram fa-lg'></i></a>
+                    <a href="#" aria-label='Facebook' class='text-white me-3'><i class='fab fa-facebook fa-lg'></i></a>
+                    <a href="#" aria-label='YouTube' class='text-white'><i class='fab fa-youtube fa-lg'></i></a>
+
+                </div>
+
+            </div>
+
+            <div class='text-center mt-4 pt-4 border-top border-white-50'>
+                &copy; 2024 Centauros. Todos los derechos reservados.
+            </div>
+
+        </div>
+
+    </footer>
+</body>

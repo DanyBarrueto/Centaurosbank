@@ -4,12 +4,16 @@ import { IngresoComponent } from './ingreso/ingreso.component';
 import { HomeComponent } from './home/home.component';
 import { RegistroComponent } from './registro/registro.component';
 import { RecuperarComponent } from './recuperar/recuperar.component';
+import { PerfilesComponent } from './perfiles/perfiles.component';
+import { UsuarioClienteComponent } from './usuario-cliente/usuario-cliente.component';
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
   {path: 'ingreso', component:IngresoComponent},
   {path: 'registro', component:RegistroComponent},
-  {path: 'recuperar_password', component:RecuperarComponent}
+  {path: 'recuperar_password', component:RecuperarComponent},
+  {path: 'perfiles', component:PerfilesComponent},
+  {path: 'cliente', component:UsuarioClienteComponent}
 ];
 
 @NgModule({

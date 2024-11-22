@@ -7,6 +7,8 @@ import { IngresoComponent } from './ingreso/ingreso.component';
 import { HomeComponent } from './home/home.component';
 import { RegistroComponent } from './registro/registro.component';
 import { RecuperarComponent } from './recuperar/recuperar.component';
+import { PerfilesComponent } from './perfiles/perfiles.component';
+import { UsuarioClienteComponent } from './usuario-cliente/usuario-cliente.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { RecuperarComponent } from './recuperar/recuperar.component';
     IngresoComponent,
     HomeComponent,
     RegistroComponent,
-    RecuperarComponent
+    RecuperarComponent,
+    PerfilesComponent,
+    UsuarioClienteComponent
   ],
   imports: [
     BrowserModule,
