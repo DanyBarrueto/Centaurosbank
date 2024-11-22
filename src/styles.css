@@ -23,12 +23,8 @@
     text-align: center;
 }
 
-.botones_reg a{
+.botones_reg button{
     margin-right: 10px;
-    border-radius: 25px;
-    background-color: #378642;
-    color: #ffffff;
-    text-align: center;
 }
 
 .tarjetaC{

@@ -14,4 +14,8 @@ export class AppComponent {
   IniciarSesion(){
     this.router.navigate(['/ingreso']);
   }
+
+  Registro(){
+    this.router.navigate(['/registro']);
+  }
 }
